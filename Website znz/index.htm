@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zanzibar Seaweed Products</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="Zanzibar%20Seaweed%20Products_files/3.4.17"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="Zanzibar%20Seaweed%20Products_files/all.min.css">
+    <link rel="stylesheet" href="Zanzibar%20Seaweed%20Products_files/css2.css">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Custom colors for seaweed/ocean theme */
+        :root {
+            --sea-green: #2a9d8f;
+            --sea-blue: #1d3557;
+            --sand: #e9c46a;
+            --coral: #e76f51;
+            --light-sea: #a8dadc;
+        }
+        
+        /* Custom styles for the hero slider */
+        .slider-container {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+        
+        .slider-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .slider-slide.active {
+            opacity: 1;
+        }
+        
+        .slider-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .slider-indicator.active {
+            background-color: #ffffff;
+        }
+        
+        /* Custom animation for buttons */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+        
+        /* Custom transition for dropdown menu */
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        /* Ocean wave divider */
+        .wave-divider {
+            position: relative;
+            height: 60px;
+            overflow: hidden;
+        }
+        
+        .wave {
+            animation: wave 12s linear infinite;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23f8fafc'/%3E%3C/svg%3E");
+            position: absolute;
+            bottom: 0;
+            width: 200%;
+            height: 100%;
+        }
+        
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(-25%); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Seaweed pattern background */
+        .seaweed-bg {
+            background-color: #1d3557;
+            background-image: radial-gradient(circle at 10% 20%, rgba(42, 157, 143, 0.2) 0%, transparent 20%), 
+                              radial-gradient(circle at 90% 80%, rgba(42, 157, 143, 0.2) 0%, transparent 20%);
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-6{bottom:1.5rem}.left-0{left:0px}.left-1\/2{left:50%}.left-4{left:1rem}.right-0{right:0px}.right-4{right:1rem}.top-0{top:0px}.top-1\/2{top:50%}.top-4{top:1rem}.top-full{top:100%}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.-mt-1{margin-top:-0.25rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:0.25rem}.ml-2{margin-left:0.5rem}.mr-2{margin-right:0.5rem}.mr-3{margin-right:0.75rem}.mr-4{margin-right:1rem}.mt-1{margin-top:0.25rem}.mt-10{margin-top:2.5rem}.mt-16{margin-top:4rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-20{height:5rem}.h-48{height:12rem}.h-full{height:100%}.w-10{width:2.5rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-20{width:5rem}.w-48{width:12rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.flex-shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-4{border-width:4px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-\[\#2a9d8f\]{--tw-border-opacity:1;border-color:rgb(42 157 143 / var(--tw-border-opacity, 1))}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity, 1))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1))}.bg-\[\#1d3557\]{--tw-bg-opacity:1;background-color:rgb(29 53 87 / var(--tw-bg-opacity, 1))}.bg-\[\#2a9d8f\]{--tw-bg-opacity:1;background-color:rgb(42 157 143 / var(--tw-bg-opacity, 1))}.bg-\[\#a8dadc\]{--tw-bg-opacity:1;background-color:rgb(168 218 220 / var(--tw-bg-opacity, 1))}.bg-\[\#e76f51\]{--tw-bg-opacity:1;background-color:rgb(231 111 81 / var(--tw-bg-opacity, 1))}.bg-\[\#e9c46a\]{--tw-bg-opacity:1;background-color:rgb(233 196 106 / var(--tw-bg-opacity, 1))}.bg-\[\#f8fafc\]{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-opacity-30{--tw-bg-opacity:0.3}.bg-opacity-50{--tw-bg-opacity:0.5}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-\[\#2a9d8f\]{--tw-gradient-from:#2a9d8f var(--tw-gradient-from-position);--tw-gradient-to:rgb(42 157 143 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-\[\#a8dadc\]{--tw-gradient-from:#a8dadc var(--tw-gradient-from-position);--tw-gradient-to:rgb(168 218 220 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-\[\#e76f51\]{--tw-gradient-from:#e76f51 var(--tw-gradient-from-position);--tw-gradient-to:rgb(231 111 81 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-\[\#e9c46a\]{--tw-gradient-from:#e9c46a var(--tw-gradient-from-position);--tw-gradient-to:rgb(233 196 106 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-\[\#1d3557\]{--tw-gradient-to:#1d3557 var(--tw-gradient-to-position)}.to-\[\#457b9d\]{--tw-gradient-to:#457b9d var(--tw-gradient-to-position)}.to-\[\#9d4edd\]{--tw-gradient-to:#9d4edd var(--tw-gradient-to-position)}.to-\[\#e76f51\]{--tw-gradient-to:#e76f51 var(--tw-gradient-to-position)}.object-cover{object-fit:cover}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pl-2{padding-left:0.5rem}.pl-4{padding-left:1rem}.pt-4{padding-top:1rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-6xl{font-size:3.75rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.italic{font-style:italic}.text-\[\#1d3557\]{--tw-text-opacity:1;color:rgb(29 53 87 / var(--tw-text-opacity, 1))}.text-\[\#2a9d8f\]{--tw-text-opacity:1;color:rgb(42 157 143 / var(--tw-text-opacity, 1))}.text-blue-100{--tw-text-opacity:1;color:rgb(219 234 254 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-\[\#0a66c2\]:hover{--tw-bg-opacity:1;background-color:rgb(10 102 194 / var(--tw-bg-opacity, 1))}.hover\:bg-\[\#1d3557\]:hover{--tw-bg-opacity:1;background-color:rgb(29 53 87 / var(--tw-bg-opacity, 1))}.hover\:bg-\[\#1d9bf0\]:hover{--tw-bg-opacity:1;background-color:rgb(29 155 240 / var(--tw-bg-opacity, 1))}.hover\:bg-\[\#2a9d8f\]:hover{--tw-bg-opacity:1;background-color:rgb(42 157 143 / var(--tw-bg-opacity, 1))}.hover\:bg-\[\#e4405f\]:hover{--tw-bg-opacity:1;background-color:rgb(228 64 95 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-300:hover{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.hover\:bg-opacity-50:hover{--tw-bg-opacity:0.5}.hover\:text-\[\#2a9d8f\]:hover{--tw-text-opacity:1;color:rgb(42 157 143 / var(--tw-text-opacity, 1))}.hover\:text-gray-800:hover{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-\[\#2a9d8f\]:focus{--tw-border-opacity:1;border-color:rgb(42 157 143 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:w-1\/3{width:33.333333%}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}}@media (min-width: 1024px){.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style></head>
+<body class="bg-gray-50">
+    <!-- Section 1: Header with horizontal dropdown menu -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="bg-[#2a9d8f] w-10 h-10 rounded-full flex items-center justify-center">
+                    <i class="fas fa-water text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">ZanSea<span class="text-[#2a9d8f]">Products</span></h1>
+                    <p class="text-xs text-gray-500 -mt-1">Sustainable Seaweed from Zanzibar</p>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-700 hover:text-[#2a9d8f] font-medium transition">Home</a>
+                
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-[#2a9d8f] font-medium transition flex items-center">
+                        Products <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </a>
+                    <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-100">
+                        <a href="#soaps" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><i class="fas fa-soap mr-2 text-[#2a9d8f]"></i> Seaweed Soaps</a>
+                        <a href="#oils" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><i class="fas fa-tint mr-2 text-[#2a9d8f]"></i> Seaweed Oils</a>
+                        <a href="#jellies" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><i class="fas fa-prescription-bottle mr-2 text-[#2a9d8f]"></i> Seaweed Jellies</a>
+                        <a href="#skincare" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><i class="fas fa-spa mr-2 text-[#2a9d8f]"></i> Skincare Range</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-[#2a9d8f] font-medium transition flex items-center">
+                        About <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </a>
+                    <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-10 border border-gray-100">
+                        <a href="#story" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Story</a>
+                        <a href="#sustainability" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sustainability</a>
+                        <a href="#farmers" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Farmers</a>
+                        <a href="#process" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Production Process</a>
+                    </div>
+                </div>
+                
+                <a href="#products" class="text-gray-700 hover:text-[#2a9d8f] font-medium transition">Shop</a>
+                <a href="#contact" class="text-gray-700 hover:text-[#2a9d8f] font-medium transition">Contact</a>
+                <a href="#cart" class="bg-[#2a9d8f] text-white hover:bg-[#1d3557] font-medium py-2 px-4 rounded-lg transition">
+                    <i class="fas fa-shopping-cart mr-2"></i> Cart
+                </a>
+            </nav>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t py-4 px-4">
+            <div class="flex flex-col space-y-4">
+                <a href="#" class="text-gray-700 hover:text-[#2a9d8f] font-medium">Home</a>
+                
+                <div class="flex flex-col space-y-2 pl-4">
+                    <span class="text-gray-700 font-medium">Products</span>
+                    <a href="#soaps" class="text-gray-600 hover:text-[#2a9d8f] pl-2">Seaweed Soaps</a>
+                    <a href="#oils" class="text-gray-600 hover:text-[#2a9d8f] pl-2">Seaweed Oils</a>
+                    <a href="#jellies" class="text-gray-600 hover:text-[#2a9d8f] pl-2">Seaweed Jellies</a>
+                    <a href="#skincare" class="text-gray-600 hover:text-[#2a9d8f] pl-2">Skincare Range</a>
+                </div>
+                
+                <div class="flex flex-col space-y-2 pl-4">
+                    <span class="text-gray-700 font-medium">About</span>
+                    <a href="#story" class="text-gray-600 hover:text-[#2a9d8f] pl-2">Our Story</a>
+                    <a href="#sustainability" class="text-gray-600 hover:text-[#2a9d8f] pl-2">Sustainability</a>
+                    <a href="#farmers" class="text-gray-600 hover:text-[#2a9d8f] pl-2">Our Farmers</a>
+                    <a href="#process" class="text-gray-600 hover:text-[#2a9d8f] pl-2">Production Process</a>
+                </div>
+                
+                <a href="#products" class="text-gray-700 hover:text-[#2a9d8f] font-medium">Shop</a>
+                <a href="#contact" class="text-gray-700 hover:text-[#2a9d8f] font-medium">Contact</a>
+                <a href="#cart" class="bg-[#2a9d8f] text-white hover:bg-[#1d3557] font-medium py-2 px-4 rounded-lg transition text-center">
+                    <i class="fas fa-shopping-cart mr-2"></i> View Cart
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 2: Hero image slider with overlay text -->
+    <section class="slider-container">
+        <!-- Slide 1 -->
+        <div class="slider-slide" style="background-image: linear-gradient(rgba(243, 245, 248, 0.7), rgba(42, 157, 143, 0.5)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwmLmIeD-tcuvPHBDRo0PiUvDB3lcJakh4fw&amp;s')">
+            <div class="container mx-auto h-full flex items-center px-4">
+                <div class="text-white max-w-2xl">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Pure Seaweed from Zanzibar Shores</h2>
+                    <p class="text-xl mb-6">Discover our sustainable 
+seaweed products - nourishing soaps, restorative oils, and revitalizing 
+jellies harvested from the pristine waters of Zanzibar.</p>
+                    <a href="#products" class="bg-[#2a9d8f] hover:bg-[#1d3557] text-white font-medium py-3 px-8 rounded-lg inline-block transition duration-300">Explore Products</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slider-slide active" style="background-image: linear-gradient(rgba(29, 53, 87, 0.7), rgba(42, 157, 143, 0.5)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyUxzVkJ8qvOk8fXdtKWy-_XzTY2mzZrw-JQ&amp;s')">
+            <div class="container mx-auto h-full flex items-center px-4">
+                <div class="text-white max-w-2xl">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Sustainable Beauty &amp; Wellness</h2>
+                    <p class="text-xl mb-6">Harnessing the power of 
+Zanzibar seaweed for natural skincare that benefits both you and the 
+environment. Ethically sourced, sustainably produced.</p>
+                    <a href="#story" class="bg-[#2a9d8f] hover:bg-[#1d3557] text-white font-medium py-3 px-8 rounded-lg inline-block transition duration-300">Our Story</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="slider-slide" style="background-image: linear-gradient(rgba(29, 53, 87, 0.7), rgba(42, 157, 143, 0.5)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu2-RACuKXNJ0dFudeeGI2_b0xSZtYJZ41Rw&amp;s')">
+            <div class="container mx-auto h-full flex items-center px-4">
+                <div class="text-white max-w-2xl">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Empowering Local Communities</h2>
+                    <p class="text-xl mb-6">Every purchase supports Zanzibar seaweed farmers and promotes sustainable livelihoods. Join us in creating positive impact.</p>
+                    <a href="#farmers" class="bg-[#2a9d8f] hover:bg-[#1d3557] text-white font-medium py-3 px-8 rounded-lg inline-block transition duration-300">Meet Our Farmers</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider controls -->
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <span class="slider-indicator" data-slide="0"></span>
+            <span class="slider-indicator active" data-slide="1"></span>
+            <span class="slider-indicator" data-slide="2"></span>
+        </div>
+        
+        <!-- Previous/Next buttons -->
+        <button id="prev-slide" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-30 w-12 h-12 rounded-full flex items-center justify-center hover:bg-opacity-50 transition">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="next-slide" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl bg-black bg-opacity-30 w-12 h-12 rounded-full flex items-center justify-center hover:bg-opacity-50 transition">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </section>
+
+    <!-- Ocean wave divider -->
+    <div class="wave-divider bg-gray-50">
+        <div class="wave"></div>
+    </div>
+
+    <!-- Section 3: Four seaweed products cards -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Seaweed Products</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Harvested 
+from the pristine waters of Zanzibar, our seaweed products are 100% 
+natural, sustainable, and packed with essential nutrients for your skin 
+and body.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1: Seaweed Soap -->
+                <div id="soaps" class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-gradient-to-r from-[#2a9d8f] to-[#1d3557] flex items-center justify-center relative">
+                        <i class="fas fa-soap text-white text-6xl"></i>
+                        <span class="absolute top-4 right-4 bg-[#e76f51] text-white text-xs font-bold px-3 py-1 rounded-full">BESTSELLER</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Seaweed &amp; Coconut Soap</h3>
+                            <span class="ml-2 bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded">New</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Gentle cleansing bar with nourishing seaweed extract and moisturizing coconut oil. Perfect for all skin types.</p>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600 text-sm">(128 reviews)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-[#1d3557]">$8.99</span>
+                            <button class="add-to-cart-btn bg-[#2a9d8f] hover:bg-[#1d3557] text-white font-medium py-2 px-4 rounded-lg transition" data-product="Seaweed &amp; Coconut Soap">
+                                <i class="fas fa-cart-plus mr-2"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2: Seaweed Oil -->
+                <div id="oils" class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-gradient-to-r from-[#a8dadc] to-[#457b9d] flex items-center justify-center">
+                        <i class="fas fa-tint text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Seaweed Body Oil</h3>
+                        <p class="text-gray-600 mb-4">Rich, nourishing oil blend with seaweed extract, argan oil, and vitamin E for deeply hydrated skin.</p>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600 text-sm">(94 reviews)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-[#1d3557]">$14.99</span>
+                            <button class="add-to-cart-btn bg-[#2a9d8f] hover:bg-[#1d3557] text-white font-medium py-2 px-4 rounded-lg transition" data-product="Seaweed Body Oil">
+                                <i class="fas fa-cart-plus mr-2"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3: Seaweed Jelly -->
+                <div id="jellies" class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-gradient-to-r from-[#e9c46a] to-[#e76f51] flex items-center justify-center relative">
+                        <i class="fas fa-prescription-bottle text-white text-6xl"></i>
+                        <span class="absolute top-4 right-4 bg-[#1d3557] text-white text-xs font-bold px-3 py-1 rounded-full">LIMITED</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Seaweed &amp; Aloe Jelly</h3>
+                        <p class="text-gray-600 mb-4">Soothing gel with seaweed extract and pure aloe vera for sun-kissed skin and minor irritations.</p>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600 text-sm">(76 reviews)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-[#1d3557]">$12.99</span>
+                            <button class="add-to-cart-btn bg-[#2a9d8f] hover:bg-[#1d3557] text-white font-medium py-2 px-4 rounded-lg transition" data-product="Seaweed &amp; Aloe Jelly">
+                                <i class="fas fa-cart-plus mr-2"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 4: Seaweed Skincare Set -->
+                <div id="skincare" class="product-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-gradient-to-r from-[#e76f51] to-[#9d4edd] flex items-center justify-center">
+                        <i class="fas fa-spa text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Complete Seaweed Skincare Set</h3>
+                        <p class="text-gray-600 mb-4">All-in-one set includes soap, oil, jelly, and facial mask. Perfect for a complete natural skincare routine.</p>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600 text-sm">(52 reviews)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-[#1d3557]">$34.99</span>
+                            <button class="add-to-cart-btn bg-[#2a9d8f] hover:bg-[#1d3557] text-white font-medium py-2 px-4 rounded-lg transition" data-product="Complete Seaweed Skincare Set">
+                                <i class="fas fa-cart-plus mr-2"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Benefits section -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="w-14 h-14 bg-[#a8dadc] rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-leaf text-[#1d3557] text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">100% Natural</h3>
+                    <p class="text-gray-600">All our products are made from naturally harvested seaweed with no synthetic additives or preservatives.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="w-14 h-14 bg-[#e9c46a] rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hand-holding-heart text-[#1d3557] text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Sustainable Harvesting</h3>
+                    <p class="text-gray-600">We use regenerative seaweed farming techniques that benefit the marine ecosystem.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="w-14 h-14 bg-[#2a9d8f] rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Empowers Communities</h3>
+                    <p class="text-gray-600">Direct partnerships with Zanzibar seaweed farmers ensure fair wages and economic opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Banner about sustainability -->
+    <section class="py-16 seaweed-bg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Sustainable Seaweed Farming in Zanzibar</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Our 
+seaweed is harvested using sustainable methods that actually improve 
+ocean health. Seaweed farming absorbs carbon, creates habitats for 
+marine life, and provides livelihoods for coastal communities.</p>
+            <a href="#sustainability" class="bg-white text-[#1d3557] hover:bg-gray-100 font-bold py-4 px-10 rounded-lg text-lg inline-block transition duration-300 shadow-lg">
+                <i class="fas fa-seedling mr-2"></i> Learn About Our Sustainability
+            </a>
+            <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-white">
+                <div>
+                    <p class="text-3xl font-bold">200+</p>
+                    <p class="text-blue-100">Local Farmers</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold">100%</p>
+                    <p class="text-blue-100">Natural Ingredients</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold">10K+</p>
+                    <p class="text-blue-100">Products Sold</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold">5</p>
+                    <p class="text-blue-100">Coastal Villages Supported</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: About our story and process -->
+    <section id="story" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">From Ocean to Your Home</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover the 
+journey of our Zanzibar seaweed products, from sustainable harvesting to
+ careful processing that preserves all the natural benefits.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 id="process" class="text-2xl font-bold text-gray-800 mb-6">Our Production Process</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="w-12 h-12 bg-[#2a9d8f] rounded-full flex items-center justify-center">
+                                    <span class="text-white font-bold">1</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Sustainable Harvesting</h4>
+                                <p class="text-gray-600">Seaweed is carefully hand-harvested by local farmers during optimal growth periods to ensure regeneration.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="w-12 h-12 bg-[#2a9d8f] rounded-full flex items-center justify-center">
+                                    <span class="text-white font-bold">2</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Sun-Drying</h4>
+                                <p class="text-gray-600">Harvested seaweed is naturally sun-dried on raised racks to preserve nutrients without artificial heat.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="w-12 h-12 bg-[#2a9d8f] rounded-full flex items-center justify-center">
+                                    <span class="text-white font-bold">3</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Extraction &amp; Processing</h4>
+                                <p class="text-gray-600">Active compounds are extracted using cold-press and low-temperature methods to maintain potency.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="w-12 h-12 bg-[#2a9d8f] rounded-full flex items-center justify-center">
+                                    <span class="text-white font-bold">4</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Product Formulation</h4>
+                                <p class="text-gray-600">Seaweed extracts are combined with other natural ingredients to create our soaps, oils, and jellies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-gray-100 rounded-xl p-6 shadow-lg">
+                        <h3 id="farmers" class="text-2xl font-bold text-gray-800 mb-6">Meet Our Farmers</h3>
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 rounded-full overflow-hidden mr-4 border-4 border-white shadow">
+                                <img src="Zanzibar%20Seaweed%20Products_files/photo-1573496359142-b8d87734a5a2.avif" alt="Farmer Aisha" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800">Aisha Mohammed</h4>
+                                <p class="text-[#2a9d8f]">Seaweed Farmer, Paje Village</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-gray-700 italic border-l-4 border-[#2a9d8f] pl-4 py-2 mb-6">
+                            "Seaweed farming has changed my life. I can 
+support my family while doing work that helps protect our ocean. Knowing
+ that people around the world use our seaweed in their daily routines 
+makes me proud."
+                        </blockquote>
+                        <div class="bg-[#f8fafc] p-4 rounded-lg">
+                            <h4 class="font-bold text-gray-800 mb-2">How Your Purchase Helps:</h4>
+                            <ul class="text-gray-600 space-y-1">
+                                <li class="flex items-center"><i class="fas fa-check text-[#2a9d8f] mr-2"></i> Provides fair wages for local farmers</li>
+                                <li class="flex items-center"><i class="fas fa-check text-[#2a9d8f] mr-2"></i> Funds community education programs</li>
+                                <li class="flex items-center"><i class="fas fa-check text-[#2a9d8f] mr-2"></i> Supports sustainable ocean conservation</li>
+                                <li class="flex items-center"><i class="fas fa-check text-[#2a9d8f] mr-2"></i> Creates opportunities for women in coastal communities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Footer with contact info and social media links -->
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="bg-[#2a9d8f] w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fas fa-water text-white"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold">ZanSea<span class="text-[#2a9d8f]">Products</span></h2>
+                            <p class="text-xs text-gray-400">Sustainable Seaweed from Zanzibar</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">Harnessing the power of Zanzibar seaweed to create natural, sustainable products that benefit both people and the planet.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 hover:bg-[#2a9d8f] w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-[#1d9bf0] w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-[#e4405f] w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-[#0a66c2] w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Our Products</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#soaps" class="hover:text-white transition">Seaweed Soaps</a></li>
+                        <li><a href="#oils" class="hover:text-white transition">Seaweed Oils</a></li>
+                        <li><a href="#jellies" class="hover:text-white transition">Seaweed Jellies</a></li>
+                        <li><a href="#skincare" class="hover:text-white transition">Skincare Sets</a></li>
+                        <li><a href="#" class="hover:text-white transition">Gift Packages</a></li>
+                        <li><a href="#" class="hover:text-white transition">Wholesale Orders</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-[#2a9d8f]"></i>
+                            <span>Seaweed Harvesting Co-operative<br>Paje, Zanzibar, Tanzania</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-[#2a9d8f]"></i>
+                            <span>+255 777 123 456</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-[#2a9d8f]"></i>
+                            <span>info@zanseaproducts.co.tz</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-[#2a9d8f]"></i>
+                            <span>Mon-Fri: 8:00 AM - 5:00 PM EAT</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new products and sustainable farming initiatives.</p>
+                    <form class="space-y-3">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-[#2a9d8f]">
+                        <button type="submit" class="w-full bg-[#2a9d8f] hover:bg-[#1d3557] text-white font-medium py-3 px-4 rounded-lg transition">
+                            <i class="fas fa-paper-plane mr-2"></i> Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500">
+                <p>© 2026 Zanzibar Seaweed Products. All rights reserved. | Proudly supporting sustainable seaweed farming in Zanzibar</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal (hidden by default) -->
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="absolute right-0 top-0 h-full w-full md:w-1/3 bg-white shadow-xl overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Your Cart</h3>
+                    <button id="close-cart" class="text-gray-500 hover:text-gray-800">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <div id="cart-items" class="space-y-4 mb-6"><p class="text-gray-500 text-center py-8">Your cart is empty</p></div>
+                <div class="border-t pt-4">
+                    <div class="flex justify-between mb-4">
+                        <span class="text-gray-700">Total:</span>
+                        <span id="cart-total" class="text-xl font-bold text-[#1d3557]">$0.00</span>
+                    </div>
+                    <button class="w-full bg-[#2a9d8f] hover:bg-[#1d3557] text-white font-medium py-3 px-4 rounded-lg transition">
+                        <i class="fas fa-shopping-bag mr-2"></i> Proceed to Checkout
+                    </button>
+                    <button id="continue-shopping" class="w-full mt-3 bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-3 px-4 rounded-lg transition">
+                        Continue Shopping
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize product data and cart system
+        document.addEventListener('DOMContentLoaded', function() {
+            // Product data for seaweed products
+            const products = [
+                { 
+                    id: 1, 
+                    name: "Seaweed & Coconut Soap", 
+                    price: 8.99, 
+                    color: "from-[#2a9d8f] to-[#1d3557]", 
+                    icon: "fas fa-soap",
+                    description: "Gentle cleansing bar with nourishing seaweed extract and moisturizing coconut oil."
+                },
+                { 
+                    id: 2, 
+                    name: "Seaweed Body Oil", 
+                    price: 14.99, 
+                    color: "from-[#a8dadc] to-[#457b9d]", 
+                    icon: "fas fa-tint",
+                    description: "Rich, nourishing oil blend with seaweed extract, argan oil, and vitamin E."
+                },
+                { 
+                    id: 3, 
+                    name: "Seaweed & Aloe Jelly", 
+                    price: 12.99, 
+                    color: "from-[#e9c46a] to-[#e76f51]", 
+                    icon: "fas fa-prescription-bottle",
+                    description: "Soothing gel with seaweed extract and pure aloe vera for sun-kissed skin."
+                },
+                { 
+                    id: 4, 
+                    name: "Complete Seaweed Skincare Set", 
+                    price: 34.99, 
+                    color: "from-[#e76f51] to-[#9d4edd]", 
+                    icon: "fas fa-spa",
+                    description: "All-in-one set includes soap, oil, jelly, and facial mask."
+                }
+            ];
+            
+            // Initialize cart in localStorage if not present
+            if (!localStorage.getItem('seaweedCart')) {
+                localStorage.setItem('seaweedCart', JSON.stringify([]));
+            }
+            
+            // Load current cart
+            let cart = JSON.parse(localStorage.getItem('seaweedCart'));
+            
+            // Initialize cart functionality
+            function initializeCart() {
+                updateCartUI();
+                
+                // Add event listeners to "Add to Cart" buttons
+                document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const productName = this.getAttribute('data-product');
+                        addToCart(productName);
+                    });
+                });
+                
+                // Cart modal functionality
+                const cartButton = document.querySelector('a[href="#cart"]');
+                const cartModal = document.getElementById('cart-modal');
+                const closeCartButton = document.getElementById('close-cart');
+                const continueShoppingButton = document.getElementById('continue-shopping');
+                
+                if (cartButton) {
+                    cartButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        cartModal.classList.remove('hidden');
+                    });
+                }
+                
+                closeCartButton.addEventListener('click', function() {
+                    cartModal.classList.add('hidden');
+                });
+                
+                continueShoppingButton.addEventListener('click', function() {
+                    cartModal.classList.add('hidden');
+                });
+                
+                // Close modal when clicking outside
+                cartModal.addEventListener('click', function(e) {
+                    if (e.target === cartModal) {
+                        cartModal.classList.add('hidden');
+                    }
+                });
+            }
+            
+            // Add product to cart
+            function addToCart(productName) {
+                const product = products.find(p => p.name === productName);
+                
+                if (!product) return;
+                
+                // Check if product already in cart
+                const existingItemIndex = cart.findIndex(item => item.id === product.id);
+                
+                if (existingItemIndex >= 0) {
+                    // Increase quantity
+                    cart[existingItemIndex].quantity += 1;
+                } else {
+                    // Add new item
+                    cart.push({
+                        id: product.id,
+                        name: product.name,
+                        price: product.price,
+                        quantity: 1
+                    });
+                }
+                
+                // Update localStorage
+                localStorage.setItem('seaweedCart', JSON.stringify(cart));
+                
+                // Update UI
+                updateCartUI();
+                
+                // Show confirmation message
+                showMessage(`${product.name} added to cart!`, 'success');
+                
+                // Animate the button
+                const button = document.querySelector(`.add-to-cart-btn[data-product="${productName}"]`);
+                button.classList.add('animate-pulse');
+                setTimeout(() => {
+                    button.classList.remove('animate-pulse');
+                }, 500);
+            }
+            
+            // Update cart UI
+            function updateCartUI() {
+                // Update cart items in modal
+                const cartItemsContainer = document.getElementById('cart-items');
+                const cartTotalElement = document.getElementById('cart-total');
+                
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = '<p class="text-gray-500 text-center py-8">Your cart is empty</p>';
+                    cartTotalElement.textContent = '$0.00';
+                    return;
+                }
+                
+                // Calculate total
+                let total = 0;
+                
+                // Render cart items
+                cartItemsContainer.innerHTML = '';
+                cart.forEach(item => {
+                    total += item.price * item.quantity;
+                    
+                    const cartItem = document.createElement('div');
+                    cartItem.className = 'flex items-center border-b pb-4';
+                    cartItem.innerHTML = `
+                        <div class="flex-grow">
+                            <h4 class="font-bold text-gray-800">${item.name}</h4>
+                            <p class="text-gray-600">$${item.price.toFixed(2)} each</p>
+                        </div>
+                        <div class="flex items-center">
+                            <button class="decrease-quantity text-gray-500 hover:text-gray-800 mr-2" data-id="${item.id}">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span class="font-bold mx-2">${item.quantity}</span>
+                            <button class="increase-quantity text-gray-500 hover:text-gray-800 ml-2" data-id="${item.id}">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <span class="ml-4 font-bold text-[#1d3557]">$${(item.price * item.quantity).toFixed(2)}</span>
+                        </div>
+                    `;
+                    
+                    cartItemsContainer.appendChild(cartItem);
+                });
+                
+                // Update total
+                cartTotalElement.textContent = `$${total.toFixed(2)}`;
+                
+                // Add event listeners to quantity buttons
+                document.querySelectorAll('.increase-quantity').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const productId = parseInt(this.getAttribute('data-id'));
+                        updateQuantity(productId, 1);
+                    });
+                });
+                
+                document.querySelectorAll('.decrease-quantity').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const productId = parseInt(this.getAttribute('data-id'));
+                        updateQuantity(productId, -1);
+                    });
+                });
+            }
+            
+            // Update item quantity in cart
+            function updateQuantity(productId, change) {
+                const itemIndex = cart.findIndex(item => item.id === productId);
+                
+                if (itemIndex >= 0) {
+                    cart[itemIndex].quantity += change;
+                    
+                    // Remove item if quantity is 0 or less
+                    if (cart[itemIndex].quantity <= 0) {
+                        cart.splice(itemIndex, 1);
+                    }
+                    
+                    // Update localStorage
+                    localStorage.setItem('seaweedCart', JSON.stringify(cart));
+                    
+                    // Update UI
+                    updateCartUI();
+                }
+            }
+            
+            // Show message
+            function showMessage(text, type) {
+                // Create message element if it doesn't exist
+                let messageDiv = document.getElementById('message-alert');
+                
+                if (!messageDiv) {
+                    messageDiv = document.createElement('div');
+                    messageDiv.id = 'message-alert';
+                    messageDiv.className = 'fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg max-w-sm';
+                    document.body.appendChild(messageDiv);
+                }
+                
+                // Set message content and style
+                messageDiv.innerHTML = '';
+                messageDiv.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg max-w-sm ${type === 'success' ? 'bg-green-100 text-green-800 border border-green-200' : 'bg-red-100 text-red-800 border border-red-200'}`;
+                messageDiv.innerHTML = `
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} mr-3"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">${text}</p>
+                        </div>
+                    </div>
+                `;
+                
+                // Hide message after 3 seconds
+                setTimeout(() => {
+                    messageDiv.classList.add('hidden');
+                }, 3000);
+            }
+            
+            // Initialize cart system
+            initializeCart();
+            
+            // Hero image slider functionality
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slider-slide');
+            const indicators = document.querySelectorAll('.slider-indicator');
+            const totalSlides = slides.length;
+            
+            // Function to show a specific slide
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                // Remove active class from all indicators
+                indicators.forEach(indicator => {
+                    indicator.classList.remove('active');
+                });
+                
+                // Show the selected slide
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                currentSlide = index;
+            }
+            
+            // Next slide function
+            function nextSlide() {
+                let nextIndex = (currentSlide + 1) % totalSlides;
+                showSlide(nextIndex);
+            }
+            
+            // Previous slide function
+            function prevSlide() {
+                let prevIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+                showSlide(prevIndex);
+            }
+            
+            // Add event listeners to slider controls
+            document.getElementById('next-slide').addEventListener('click', nextSlide);
+            document.getElementById('prev-slide').addEventListener('click', prevSlide);
+            
+            // Add event listeners to indicators
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+            
+            // Auto slide every 5 seconds
+            let slideInterval = setInterval(nextSlide, 5000);
+            
+            // Pause auto-slide when hovering over slider
+            const sliderContainer = document.querySelector('.slider-container');
+            sliderContainer.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            sliderContainer.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+            
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuButton.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    // Check if it's a cart link
+                    if (targetId === '#cart') {
+                        e.preventDefault();
+                        document.getElementById('cart-modal').classList.remove('hidden');
+                        return;
+                    }
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        
+                        // Close mobile menu if open
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            const icon = mobileMenuButton.querySelector('i');
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+
+</body></html>
